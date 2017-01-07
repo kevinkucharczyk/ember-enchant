@@ -1,0 +1,33 @@
+{{#enchant-chart
+  width=800
+  height=400
+  marginTop=20
+  marginRight=50
+  marginBottom=50
+  marginLeft=50
+  as |chart|}}
+  {{chart.line
+    xScale=(scale-time (extent (map-by 'date' currentModel)) (array 0 chart.width))
+    yScale=(scale-linear (extent (map-by 'close' currentModel)) (array chart.height 0))
+    data=currentModel
+    xProperty='date'
+    yProperty='close'
+    stroke='#779ECB'}}
+  {{chart.axis
+    scale=(scale-linear (extent (map-by 'close' currentModel)) (array chart.height 0))
+    ticks=yTicksCount}}
+  {{chart.axis
+    scale=(scale-time (extent (map-by 'date' currentModel)) (array 0 chart.width))
+    orient='bottom'
+    tickFormat='%Y-%m-%d'
+    ticks=xTicksCount}}
+{{/enchant-chart}}
+
+<br />
+<button {{action 'setAapl'}}>AAPL</button>
+<br />
+<button {{action 'setGoogl'}}>GOOGL</button>
+<br />
+xTicksCount: {{input type="number" value=xTicksCount}}
+<br />
+yTicksCount: {{input type="number" value=yTicksCount}}

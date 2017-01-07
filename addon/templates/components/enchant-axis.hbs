@@ -1,0 +1,8 @@
+<path d={{d}} stroke={{stroke}} fill="none" />
+{{#each computedTicks as |tick|}}
+  <g transform={{tick.transform}}>
+    <line stroke="#000" x1={{tick.line.x1}} x2={{tick.line.x2}} y1={{tick.line.y1}} y2={{tick.line.y2}} />
+    <text fill="#000" x={{tick.text.x}} y={{tick.text.y}} dx={{tick.text.dx}} dy={{tick.text.dy}} text-anchor={{tick.textAnchor}}>{{tick.text.value}}</text>
+  </g>
+{{/each}}
+{{yield}}
