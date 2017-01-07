@@ -3,9 +3,13 @@ import { module, test } from 'qunit';
 
 module('Unit | Helper | scale time');
 
-// Replace this with your real tests.
-test('it works', function(assert) {
-  const result = scaleTime([42]);
-  assert.ok(result);
+test('correctly calculates time scale', function(assert) {
+  const domain = [
+    new Date(2000, 0, 1),
+    new Date(2000, 0, 2),
+  ];
+  const range = [0, 1];
+  const scale = scaleTime([domain, range]);
+  const result = scale(new Date(2000, 0, 1, 12));
+  assert.equal(result, 0.5);
 });
-

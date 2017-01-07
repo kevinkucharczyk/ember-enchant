@@ -3,9 +3,10 @@ import { module, test } from 'qunit';
 
 module('Unit | Helper | scale linear');
 
-// Replace this with your real tests.
-test('it works', function(assert) {
-  const result = scaleLinear([42]);
-  assert.ok(result);
+test('correctly calculates linear scale', function(assert) {
+  const domain = [0, 10];
+  const range = [0, 1];
+  const scale = scaleLinear([domain, range]);
+  assert.equal(scale(2), 0.2);
 });
 
