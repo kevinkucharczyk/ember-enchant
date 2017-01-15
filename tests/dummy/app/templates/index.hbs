@@ -2,7 +2,7 @@
   width=800
   height=400
   marginTop=20
-  marginRight=50
+  marginRight=20
   marginBottom=50
   marginLeft=50
   as |chart|}}
@@ -13,14 +13,18 @@
     xProperty='date'
     yProperty='close'
     stroke='#779ECB'}}
-  {{chart.axis
+  {{#chart.axis
     scale=(scale-linear (extent (map-by 'close' currentModel)) (array chart.height 0))
     ticks=yTicksCount}}
-  {{chart.axis
+    {{enchant-text value='Close' x=-35 y=(div chart.height 2) rotate=-90}}
+  {{/chart.axis}}
+  {{#chart.axis
     scale=(scale-time (extent (map-by 'date' currentModel)) (array 0 chart.width))
     orient='bottom'
     tickFormat='%Y-%m-%d'
     ticks=xTicksCount}}
+    {{enchant-text value='Date' x=(div chart.width 2) y=40}}
+  {{/chart.axis}}
 {{/enchant-chart}}
 
 <br />
