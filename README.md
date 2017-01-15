@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/kevinkucharczyk/ember-enchant.svg?branch=master)](https://travis-ci.org/kevinkucharczyk/ember-enchant)
+
 # ember-enchant
 
 An Ember addon for svg graphs.
