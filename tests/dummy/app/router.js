@@ -6,7 +6,9 @@ const Router = Ember.Router.extend({
   rootURL: config.rootURL,
 });
 
+/* eslint-disable array-callback-return */
 Router.map(function() {
 });
+/* eslint-enable array-callback-return */
 
 export default Router;

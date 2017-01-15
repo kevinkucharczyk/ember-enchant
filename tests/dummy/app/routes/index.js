@@ -1,8 +1,12 @@
-import Route from 'ember-route';
-import get from 'ember-metal/get';
-import set from 'ember-metal/set';
+import Ember from 'ember';
 import aapl from 'dummy/data/aapl';
 import googl from 'dummy/data/googl';
+
+const {
+  Route,
+  get,
+  set,
+} = Ember;
 
 export default Route.extend({
   model() {

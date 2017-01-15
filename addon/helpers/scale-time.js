@@ -1,5 +1,7 @@
-import { helper } from 'ember-helper';
+import Ember from 'ember';
 import { scaleTime as d3ScaleTime } from 'd3-scale';
+
+const { Helper: { helper } } = Ember;
 
 export function scaleTime([domain, range]) {
   return d3ScaleTime()

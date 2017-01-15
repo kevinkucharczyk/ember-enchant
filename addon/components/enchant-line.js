@@ -1,8 +1,13 @@
-import Component from 'ember-component';
-import computed from 'ember-computed';
-import get, { getProperties } from 'ember-metal/get';
+import Ember from 'ember';
 import { line, curveBasis } from 'd3-shape';
 import layout from '../templates/components/enchant-line';
+
+const {
+  Component,
+  computed,
+  get,
+  getProperties,
+} = Ember;
 
 export default Component.extend({
   layout,

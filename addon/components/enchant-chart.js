@@ -1,7 +1,11 @@
-import Component from 'ember-component';
-import computed from 'ember-computed';
-import { getProperties } from 'ember-metal/get';
+import Ember from 'ember';
 import layout from '../templates/components/enchant-chart';
+
+const {
+  Component,
+  computed,
+  getProperties,
+} = Ember;
 
 export default Component.extend({
   layout,
