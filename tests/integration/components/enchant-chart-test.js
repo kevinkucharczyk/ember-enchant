@@ -5,20 +5,13 @@ moduleForComponent('enchant-chart', 'Integration | Component | enchant chart', {
   integration: true,
 });
 
-test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
-
-  this.render(hbs`{{enchant-chart}}`);
-
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
+test('it renders an SVG element and yields block properly', function(assert) {
   this.render(hbs`
     {{#enchant-chart}}
-      template block text
+      <text>Test</text>
     {{/enchant-chart}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$('svg').length, 1, 'svg is rendered');
+  assert.equal(this.$('text').length, 1, 'block is rendered');
 });
