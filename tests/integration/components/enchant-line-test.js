@@ -9,8 +9,6 @@ moduleForComponent('enchant-line', 'Integration | Component | enchant line', {
 });
 
 test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
   set(this, 'xDomain', [0, 10]);
   set(this, 'xRange', [0, 800]);
   set(this, 'yDomain', [0, 100]);

@@ -35,3 +35,17 @@
 xTicksCount: {{input type="number" value=xTicksCount}}
 <br />
 yTicksCount: {{input type="number" value=yTicksCount}}
+
+{{#enchant-chart
+  width=800
+  height=400
+  marginTop=20
+  marginRight=20
+  marginBottom=50
+  marginLeft=50
+  as |chart|}}
+  {{chart.donut
+    data=model.pie
+    valueProperty='value'
+    cornerRadius=10}}
+{{/enchant-chart}}
